@@ -73,21 +73,11 @@ function setupOverlay(img, map) {
 
     // Generate GDAL command
     var cmd = [''];
-    cmd.push('In MapTiler desktop application under "Geogrphical location" -> "Corner points" copy&paste:\n');
+    cmd.push('Copy&paste into MapTiler under "Geographical location" -> "Corner points" (or use after -cornerpoints):\n');
     cmd.push('\n');
     cmd.push(dots[0].lng(), dots[0].lat());
     cmd.push(dots[1].lng(), dots[1].lat());
     cmd.push(dots[2].lng(), dots[2].lat());
-    cmd.push('\n');
-    cmd.push('\n');
-    cmd.push('or on the command line:\n');
-    cmd.push('\n');
-    cmd.push('maptiler -o tiles -cornerpoints\\\n');
-    cmd.push(dots[0].lng(), dots[0].lat());
-    cmd.push(dots[1].lng(), dots[1].lat());
-    cmd.push(dots[2].lng(), dots[2].lat());
-    cmd.push('\\\n');
-    cmd.push(basename(SRCFILE));
 
     gdalCommand.innerText = cmd.join(' ');
   });
