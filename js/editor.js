@@ -73,7 +73,7 @@ function setupOverlay(img, map) {
 
     // Generate GDAL command
     var cmd = [''];
-    cmd.push('Copy&paste into MapTiler under "Geographical location" -> "Corner points" (or use after -cornerpoints):\n');
+    cmd.push('Copy&paste into MapTiler under "Geographical location" -> "Corners" (or use after -corners):\n');
     cmd.push('\n');
     cmd.push(dots[0].lng(), dots[0].lat());
     cmd.push(dots[1].lng(), dots[1].lat());
